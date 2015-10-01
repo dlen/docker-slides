@@ -20,4 +20,4 @@ RUN curl -s $COMPOSER_URL | php &&\
       --prefer-dist cakephp/app $DESTINATION && \
     chmod 755 $DESTINATION/bin/cake
 
-CMD [ "$DESTINATION/bin/cake", "server", "-H", "$LISTEN", "$CAKE_PORT" ]
+CMD $DESTINATION/bin/cake server -H $LISTEN -p $CAKE_PORT
