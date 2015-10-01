@@ -11,6 +11,7 @@ RUN apt-get update && \
     apt-get install -y --force-yes \
     php5-fpm \
     php5-intl \
+    php5-mysql \
     curl \
     git
 
