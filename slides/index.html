@@ -58,7 +58,6 @@
               <li>Docker internal basics</li>
               <li>Docker cli at a glance</li>
               <li>Dockerfiles</li>
-              <li>Persistence and networking</li>
               <li>Demo</li>
               <li>Flame the speaker</li>
             </ul>
@@ -152,7 +151,7 @@
           </section>
 
           <section>
-            <h2 class="fragment">Great, So I will start using docker</h2>
+            <h2>Great, So I will start using docker</h2>
             <h1 class="fragment"><font color="#fa0">EVERYWHERE</font></h1>
           </section>
 
@@ -168,7 +167,7 @@
 
           <section>
             <h2>OS-Level virtualization</h2>
-            <img src="images/hypervisor-vs-docker.jpg" />
+            <img height=500 src="images/hypervisor-vs-docker.jpg" />
           </section>
 
           <section>
@@ -190,6 +189,13 @@
             <img height=500 src="images/docker_layers.jpg" />
           </section>
 
+          <section>
+            <h2>Persistence</h2>
+              <p style="text-align: left;" class=fragment><b>Containers are not persistent by default</b></p>
+              <p style="text-align: left;" class=fragment><b>Persistence must be achieved through VOLUMES</b></p>
+          </section>
+
+
 				</section>
 
         <section>
@@ -209,23 +215,36 @@
           <section>
             <h3 style="text-align: left;">Basic dockerfile</h3>
             <pre><code data-trim contenteditable>
-              FROM debian:latest
+FROM debian:latest
 
-              MAINTAINER diego.lendoiro@openhost.es
+MAINTAINER diego.lendoiro@openhost.es
 
-              RUN apt-get update && \
-                  apt-get install -y --force-yes \
-                    git \
-                    nginx-full
+RUN apt-get update && \
+apt-get install -y --force-yes \
+git \
+nginx-full
 
-              EXPOSE 80
+EXPOSE 80
 
-              CMD [ "nginx", "-g", "daemon off;" ]
+CMD [ "nginx", "-g", "daemon off;" ]
             </code></pre>
           </section>
 
+          <section>
+            <img src="images/terminal_beach.jpg" />
+          </section>
 
 				</section>
+
+        <section>
+          <h2>Flame the speaker</h2>
+          <img height=400 src=images/flame.gif />
+        </section>
+
+        <section>
+          <h2>It's Friday so...</h2>
+          <img src=images/scape.jpg />
+        </section>
 
 			</div>
 
