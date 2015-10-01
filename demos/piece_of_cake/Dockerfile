@@ -11,7 +11,8 @@ RUN apt-get update && \
     apt-get install -y --force-yes \
     php5-fpm \
     php5-intl \
-    curl
+    curl \
+    git
 
 RUN curl -s $COMPOSER_URL | php &&\
     php composer.phar create-project --no-interaction \
