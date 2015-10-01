@@ -16,6 +16,6 @@ RUN apt-get update && \
 RUN curl -s $COMPOSER_URL | php &&\
     php composer.phar create-project --no-interaction \
       --prefer-dist cakephp/app $DESTINATION && \
-    chmod 755 $DESTINATION/bin/cake && \
+    chmod 755 $DESTINATION/bin/cake
 
 CMD [ "$DESTINATION/bin/cake", "server", "-H", "$LISTEN", "$CAKE_PORT" ]
