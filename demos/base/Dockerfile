@@ -7,4 +7,7 @@ RUN apt-get update && \
       git \
       nginx-full
 
+COPY files/index.html /var/www/html/index.html
+COPY files/deal_with_it.gif /var/www/html/deal_with_it.gif
+
 CMD [ "nginx", "-g", "daemon off;"]
